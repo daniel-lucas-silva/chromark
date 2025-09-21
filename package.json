@@ -1,6 +1,6 @@
 {
   "name": "chromark",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Colorize and transform console output using §-based inline tags.",
   "type": "module",
   "license": "MIT",
