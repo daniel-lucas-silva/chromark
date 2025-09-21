@@ -1,0 +1,61 @@
+{
+  "name": "chromark",
+  "version": "0.1.0",
+  "description": "Colorize and transform console output using §-based inline tags.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Daniel Lucas Silva",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-lucas-silva/chromark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daniel-lucas-silva/chromark/issues"
+  },
+  "homepage": "https://github.com/daniel-lucas-silva/chromark#readme",
+  "keywords": [
+    "console",
+    "colors",
+    "chalk",
+    "ansi",
+    "terminal",
+    "tui",
+    "blessed",
+    "formatting"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "bun": "./index.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "index.ts"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18",
+    "bun": ">=1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "bun run build.ts",
+    "typecheck": "bunx tsc -p tsconfig.json",
+    "example": "bun run example/index.ts",
+    "prepare": "bun run build",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "packageManager": "bun@1.2.22"
+}
